@@ -9,7 +9,7 @@ import { RegistrationCustomersComponent } from './registration-customers/registr
 import { LoginComponent } from './login/login.component';
 import {AppService} from './app.service';
 import {AuthenticationService} from './authentication.service';
-import {HttpClientModule} from '@angular/common/http';
+
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddItemComponent } from './add-item/add-item.component';
@@ -21,6 +21,7 @@ import {ViewOrderService} from './view-order/view-order.service';
 import { SuccessComponent } from './success/success.component';
 import { MenuComponent } from './menu/menu.component';
 import {MenuService} from './menu/menu.service';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
