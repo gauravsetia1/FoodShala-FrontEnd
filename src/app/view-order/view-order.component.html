@@ -1,0 +1,26 @@
+<div class="container bdr ">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th></th>
+      <th>Food Items</th>
+      <th>Customers</th>
+      <th>Phone No.</th>
+      <th>Date</th>
+      <th>Quantity</th>
+      <!--<th>Price</th>-->
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let his of history; index as i" >
+      <td *ngIf="his.items.users.email == user1.email">*</td>
+      <td *ngIf="his.items.users.email == user1.email">{{his.items.name}}</td>
+      <td *ngIf="his.items.users.email == user1.email">{{his.users.name}}</td>
+      <td *ngIf="his.items.users.email == user1.email">{{his.users.phone}}</td>
+      <td *ngIf="his.items.users.email == user1.email">{{his.date | date: 'medium'}}</td>
+      <td *ngIf="his.items.users.email == user1.email">{{his.quantity}}</td>
+      <!--<td>{{his.price}}</td>-->
+    </tr>
+    </tbody>
+  </table>
+</div>

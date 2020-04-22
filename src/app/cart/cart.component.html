@@ -1,0 +1,55 @@
+<div *ngIf="product.length>=1; else elseBlock">
+  <div class="container bdr mt-5 pt-5">
+    <table class="table table-hover">
+      <tr>
+        <th colspan="2">Food Items</th>
+        <th >Description</th>
+        <th colspan="2">Price</th>
+      </tr>
+      <tr *ngFor="let pro of product" class="bdr-bottom">
+        <td><img src="{{pro.items.image}}" height="200px" width="320px"></td>
+        <td>
+          <h3>{{pro.items.name}}</h3>
+          <span class="text-muted" >{{pro.items.users.name}}</span>
+          <div class="form-group mt-3">
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button class="btn" style="background: lightcoral" (click)="down(pro.items.id)"><span class="material-icons" style="font-size: small">remove</span></button>
+              </div>
+              <input type="text"  value="{{pro.quantity}}" class="form-control input-number" size="2" disabled/>
+              <div class="input-group-btn">
+                <button class="btn" style="background: lightgreen" (click)="up(pro.items.id)"><i class="material-icons" style="font-size: small">add</i></button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="pt-2">{{pro.items.description}}</div>
+          <div class="text-muted">Free Delivery</div>
+        </td>
+        <td>
+          <h2 class="pt-2">₹{{pro.items.unitPrice}}</h2>
+        </td>
+        <td style="vertical-align:middle">
+          <button class="btn btn-danger" (click)="remove(pro.items.id)"><i class="material-icons">delete</i><span style="vertical-align: top">Remove</span></button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container mt-2 d-flex justify-content-end">
+    <h3>Total Price:- ₹{{total}}</h3>
+  </div>
+  <div class="d-flex justify-content-around mt-3 pb-5">
+    <button class="btn btn-primary" routerLink="/home">Continue</button>
+    <button class="btn btn-primary" (click)="checkoutCart()">Proceed To Checkout</button>
+  </div>
+</div>
+
+<ng-template #elseBlock>
+  <div class="container bdr text-center mt-5 pt-5">
+    <img src="./assets/images/oops.PNG" alt="oops" height="300px" class="rounded-circle">
+    <h1 class="mt-2">Your Cart is Empty</h1>
+    <button class="btn btn-primary mt-3" routerLink="/home">Continue</button>
+  </div>
+</ng-template>

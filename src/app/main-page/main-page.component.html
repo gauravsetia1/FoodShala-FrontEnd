@@ -1,0 +1,19 @@
+<div class="row mx-0 head mt-4 pt-5 pb-4">
+  <div class="col-3" *ngFor="let l of list">
+    <div class="border bg-white mt-3 p-2 shd rounded-lg ">
+      <img class="zoom" src="{{l.image}}" height="200px" width="320px">
+      <div class="text-left m-3">
+        <div class="d-flex justify-content-between">
+          <span><b>{{l.name}}</b></span>
+          <span>[{{l.category}}]</span>
+        </div>
+        <div>Restaurant: <b>{{l.users.name}}</b></div>
+        <div>Price: <b>₹ {{l.unitPrice}}</b></div>
+        <div *ngIf="!appService.checkLogin() || user.authorize != 'restaurant'" class="text-center pt-2"><button class="btn btn-primary" (click) = check(l.id)>Order</button><div>
+        <!--<div class="text-center pt-2"><button class="btn btn-primary" (click) = check(l.id)>Order</button><div>-->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

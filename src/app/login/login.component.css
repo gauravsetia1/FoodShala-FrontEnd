@@ -1,0 +1,24 @@
+.head {
+  background: #88b2c7;
+}
+.width {
+  max-width:400px;
+  margin: auto;
+}
+.shd {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.color {
+  background-image: url("https://previews.123rf.com/images/dash/dash1903/dash190300252/119332978-assortment-of-various-kinds-of-indian-cousine-on-dark-rusty-table-chicken-tikka-masala-butter-nilgir.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.8;
+}
+
+.color1 {
+  opacity: 1.0;
+}

@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-sm fixed-top color d-flex justify-content-between">
+  <ul class="navbar-nav text-white">
+    <li class="nav-item">
+      <a class="nav-link d-flex log text-white" routerLink="/home">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/000/222/137/original/3d-retro-letter-f-typography.jpg" width="30px" height="30px" class="rounded-lg">
+        &nbsp;
+        <b style="font-size: 20px">FoodShala</b>
+      </a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav text-dark">
+    <li *ngIf="bool == 'false'" class="nav-item">
+      <a routerLink="/login" class="nav-link log text-dark" ><button class="btn btn-success">Login</button></a>
+    </li>
+    <li *ngIf="(bool == 'true') && (user.authorize == 'restaurant')" class="nav-item">
+      <a routerLink="/addItem" class="nav-link log text-dark" ><button class="btn btn-secondary">Add Item</button></a>
+    </li>
+    <li *ngIf="(bool == 'true') && (user.authorize == 'restaurant')" class="nav-item">
+      <a routerLink="/vieworder" class="nav-link log text-dark" ><button class="btn btn-success">View Orders</button></a>
+    </li>
+    <li *ngIf="(bool == 'true') && (user.authorize == 'restaurant')" class="nav-item">
+      <a routerLink="/menu" class="nav-link log text-dark" ><button class="btn btn-dark">My Menu</button></a>
+    </li>
+    <li *ngIf="bool == 'false'" class="nav-item">
+      <a routerLink="/customers" class="nav-link log text-dark" ><button class="btn btn-danger">Customers</button></a>
+    </li>
+    <li *ngIf="bool == 'false'" class="nav-item">
+      <a routerLink="/restaurants" class="nav-link log text-dark" ><button class="btn btn-danger">Restaurants</button></a>
+    </li>
+    <li *ngIf="(bool == 'true') && (user.authorize == 'customer')" class="nav-item">
+      <a  routerLink="/cart" class="nav-link log" ><button class="btn btn-dark">Cart</button></a>
+    </li>
+    <li *ngIf="bool == 'true'" class="nav-item">
+      <a class="nav-link log" (click)="logout()"><button class="btn btn-danger">Logout</button></a>
+    </li>
+  </ul>
+</nav>

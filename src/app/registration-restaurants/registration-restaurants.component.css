@@ -1,0 +1,18 @@
+.shd {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.color {
+  background: rgb(229, 229, 229);
+}
+.head {
+  background: #ff9485;
+}
+
+.width {
+  max-width:500px;
+  margin: auto;
+}
+
+.log {
+  cursor: pointer;
+}

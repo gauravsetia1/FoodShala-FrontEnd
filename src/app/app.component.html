@@ -1,0 +1,5 @@
+<div *ngIf="!(router.url.indexOf('login') > -1) && !(router.url.indexOf('restaurants') > -1) && !(router.url.indexOf('customers') > -1)" >
+  <app-navbar></app-navbar>
+</div>
+
+<router-outlet></router-outlet>

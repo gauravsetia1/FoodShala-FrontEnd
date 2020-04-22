@@ -1,0 +1,39 @@
+<div *ngIf="menu.length>=1; else elseBlock">
+  <div class="container bdr mt-5 pt-5">
+    <table class="table table-hover color">
+      <tr>
+        <th>Food Items</th>
+        <th>Item Name</th>
+        <th >Category</th>
+        <th >Description</th>
+        <th >Price</th>
+      </tr>
+      <tr *ngFor="let pro of menu" class="bdr-bottom">
+        <td><img src="{{pro.image}}" height="100px" width="150px"></td>
+        <td>
+          <h3>{{pro.name}}</h3>
+        </td>
+        <td>
+          <div class="pt-2">{{pro.category}}</div>
+        </td>
+        <td>
+          <div class="pt-2">{{pro.description}}</div>
+        </td>
+        <td>
+          <h2 class="pt-2">₹{{pro.unitPrice}}</h2>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="d-flex justify-content-around mt-3 pb-4">
+    <button class="btn btn-primary" routerLink="/home">Continue</button>
+  </div>
+</div>
+
+<ng-template #elseBlock>
+  <div class="container bdr text-center mt-5 pt-5">
+    <img src="./assets/images/oops.PNG" alt="oops" height="300px" class="rounded-circle">
+    <h1 class="mt-2">No Item Added Yet..</h1>
+    <button class="btn btn-primary mt-3" routerLink="/home">Continue</button>
+  </div>
+</ng-template>
