@@ -12,14 +12,14 @@ export class ViewOrderService {
   viewOrder() {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
-    const url = 'http://localhost:6060/order/vieworder';
+    const url = 'https://foodonline1.herokuapp.com/order/vieworder';
     return this.http.get(url, {headers});
   }
 
   loggedInUser() {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
-    const url = 'http://localhost:6060/users/logUser';
+    const url = 'https://foodonline1.herokuapp.com/users/logUser';
     return this.http.get(url, {headers});
   }
 

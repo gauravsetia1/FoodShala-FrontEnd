@@ -9,5 +9,5 @@ import {Router} from '@angular/router';
 export class AppComponent {
   title = 'FoodShala-Frontend';
 
-  constructor(private router: Router) {}
+  constructor(public router: Router) {}
 }

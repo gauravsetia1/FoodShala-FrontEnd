@@ -20,12 +20,12 @@ export class AppService {
   loggedInUser() {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
-    const url = 'http://localhost:6060/users/logUser';
+    const url = 'https://foodonline1.herokuapp.com/users/logUser';
     return this.http.get(url, {headers});
   }
 
   getusers() {
-    const url = 'http://localhost:6060/users/getUsers';
+    const url = 'https://foodonline1.herokuapp.com/users/getUsers';
     return this.http.get(url);
   }
 }

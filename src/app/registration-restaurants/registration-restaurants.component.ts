@@ -21,7 +21,7 @@ export class RegistrationRestaurantsComponent implements OnInit {
   cpassword;
   authorize = 'restaurant';
   address;
-  url = 'http://localhost:6060/users/addUsers';
+  url = 'https://foodonline1.herokuapp.com/users/addUsers';
   ngOnInit() {
     if (this.appService.checkLogin()) {
       this.router.navigate(['/home']);

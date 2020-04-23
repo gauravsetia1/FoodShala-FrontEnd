@@ -15,7 +15,7 @@ export class AddItemComponent implements OnInit {
   description;
   unitPrice;
   category;
-  url = 'http://localhost:6060/item/addItems';
+  url = 'https://foodonline1.herokuapp.com/item/addItems';
   constructor(private http: HttpClient, private router: Router, private appService: AppService) { }
 
   ngOnInit() {

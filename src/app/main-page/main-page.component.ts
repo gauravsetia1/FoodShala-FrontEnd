@@ -11,7 +11,7 @@ import {MainPageService} from './main-page.service';
 export class MainPageComponent implements OnInit {
   list;
   user;
-    constructor(private router: Router, private appService: AppService, private  mainPageService: MainPageService ) { }
+    constructor(private router: Router, public appService: AppService, private  mainPageService: MainPageService ) { }
 
   ngOnInit() {
       this.mainPageService.getAllItems().subscribe(data => {

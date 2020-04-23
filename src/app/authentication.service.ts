@@ -10,7 +10,7 @@ export class AuthenticationService {
   constructor(private http: HttpClient) { }
   authenticate(email, password) {
     const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(email + ':' + password) });
-    return this.http.get('http://localhost:6060/users/validuser', {headers}).pipe(
+    return this.http.get('https://foodonline1.herokuapp.com/users/validuser', {headers}).pipe(
       map( data => {
           sessionStorage.setItem('token', btoa(email + ':' + password));
         }

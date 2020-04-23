@@ -2,9 +2,8 @@
   "name": "food-shala-frontend",
   "version": "0.0.0",
   "scripts": {
-    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
-    "start": "ng server.js",
+    "start": "ng serve --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

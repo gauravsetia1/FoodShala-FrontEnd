@@ -12,35 +12,35 @@ export class CartService {
   showCart() {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
-    const url = 'http://localhost:6060/cart/showcart';
+    const url = 'https://foodonline1.herokuapp.com/cart/showcart';
     return this.http.get(url, {headers});
   }
 
   increment1(id) {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
-    const url = 'http://localhost:6060/cart/increment/1/' + id;
+    const url = 'https://foodonline1.herokuapp.com/cart/increment/1/' + id;
     return this.http.get(url, {headers});
   }
 
   decrement1(id) {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
-    const url = 'http://localhost:6060/cart/decrement/1/' + id;
+    const url = 'https://foodonline1.herokuapp.com/cart/decrement/1/' + id;
     return this.http.get(url, {headers});
   }
 
   deleteItem(id) {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
-    const url = 'http://localhost:6060/cart/deleteItem/' + id;
+    const url = 'https://foodonline1.herokuapp.com/cart/deleteItem/' + id;
     return this.http.get(url, {headers});
   }
 
   checkout() {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
-    const url = 'http://localhost:6060/cart/checkout';
+    const url = 'https://foodonline1.herokuapp.com/cart/checkout';
     return this.http.get(url, {headers});
   }
 }
