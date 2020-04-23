@@ -11,14 +11,14 @@ export class MainPageService {
   getAllItems() {
    /* const token = sessionStorage.getItem('token');*/
     /*const headers = new HttpHeaders({Authorization: 'Basic ' + token});*/
-    const url = 'http://localhost:6060/item/getItems';
+    const url = 'https://foodonline1.herokuapp.com/item/getItems';
     return this.http.get(url);
   }
 
   addToCart(id) {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
-    const url = 'http://localhost:6060/cart/addItem/' + id;
+    const url = 'https://foodonline1.herokuapp.com/cart/addItem/' + id;
     return this.http.get(url, {headers});
   }
 }
